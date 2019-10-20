@@ -1,53 +1,46 @@
-import React from 'react';
-import IconButton from '@material-ui/core/IconButton';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faApple, faAndroid, faAngellist  } from '@fortawesome/free-brands-svg-icons';
-import { Link } from 'react-router-dom';
+import React from "react";
+import {
+  faApple,
+  faAndroid,
+  faAngellist
+} from "@fortawesome/free-brands-svg-icons";
+import {
+  MainWrapper,
+  MainText,
+  ButtonsWrapper,
+  Icon,
+  SelectionsContainer,
+  ButtonLabel,
+  PreviousPage,
+  RouteLink
+} from "../StyledComponents";
 
- function Type() {
-    return (
-        <div style={mainContainer}>
-            <h1>What platform you want your app to be built on?</h1>
-                <Link to='/questions/social' style={linkStyle}>
-                    <IconButton>
-                        <FontAwesomeIcon icon={faApple}/>
-                    </IconButton>
-                </Link>
-                <h6>Apple</h6>
-                <Link to='/questions/social' style={linkStyle}>
-                    <IconButton>
-                        <FontAwesomeIcon icon={faAndroid}/>
-                    </IconButton>
-                </Link>
-                <h6>Android</h6>
-                <Link to='/questions/social' style={linkStyle}>
-                    <IconButton>
-                        <FontAwesomeIcon icon={faAngellist}/>
-                    </IconButton>
-                </Link>
-                <h6>Both</h6> 
-        </div>
-    )
+function Type() {
+  return (
+    <MainWrapper>
+        <PreviousPage to='/'>Previous Page</PreviousPage>
+      <MainText>What platform you want your app to be built on?</MainText>
+      <ButtonsWrapper>
+        <SelectionsContainer>
+            <RouteLink to="/questions/social">
+              <Icon icon={faApple} />
+            </RouteLink>
+          <ButtonLabel>Apple</ButtonLabel>
+        </SelectionsContainer>
+        <SelectionsContainer>
+          <RouteLink to="/questions/social">
+              <Icon icon={faAndroid} />
+          </RouteLink>
+          <ButtonLabel>Android</ButtonLabel>
+        </SelectionsContainer>
+        <SelectionsContainer>
+          <RouteLink to="/questions/social">
+              <Icon icon={faAngellist} />
+          </RouteLink>
+          <ButtonLabel>Both</ButtonLabel>
+        </SelectionsContainer>
+      </ButtonsWrapper>
+    </MainWrapper>
+  );
 }
 export default Type;
-
-const linkStyle = {
-    textDecoration: 'none'
-}
-const mainContainer ={
-    marginTop: 'auto',
-    display: 'grid',
-    gridTemplateColumns: '1fr, 1fr, 1fr',
-    gridTemplateRows: '1fr, 1fr',
-    justifyContent: 'center',
-    height: '100vh',
-    width: 'vw',
-    alignItems: 'center',
-    backgroundColor:'#CBF6F5'
-
-}
-const textStyle1 = {
-    maxWidth:'80vw',
-    fontSize:'2rem',
-     textAlign: 'center'
-}
