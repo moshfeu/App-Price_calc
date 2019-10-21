@@ -15,27 +15,27 @@ import {
   RouteLink
 } from "../StyledComponents";
 
-function Type() {
+function Type(props) {
   return (
     <MainWrapper>
-        <PreviousPage to='/'>Previous Page</PreviousPage>
+      <PreviousPage to="/">Previous Page</PreviousPage>
       <MainText>What platform you want your app to be built on?</MainText>
       <ButtonsWrapper>
         <SelectionsContainer>
-            <RouteLink to="/questions/social">
-              <Icon icon={faApple} />
-            </RouteLink>
+          <RouteLink onClick={setPrices} to="/questions/social" price={2000}>
+            <Icon icon={faApple} />
+          </RouteLink>
           <ButtonLabel>Apple</ButtonLabel>
         </SelectionsContainer>
         <SelectionsContainer>
-          <RouteLink to="/questions/social">
-              <Icon icon={faAndroid} />
+          <RouteLink to="/questions/social" price={1500}>
+            <Icon icon={faAndroid} />
           </RouteLink>
           <ButtonLabel>Android</ButtonLabel>
         </SelectionsContainer>
         <SelectionsContainer>
-          <RouteLink to="/questions/social">
-              <Icon icon={faAngellist} />
+          <RouteLink to="/questions/social" price={3500}>
+            <Icon icon={faAngellist} />
           </RouteLink>
           <ButtonLabel>Both</ButtonLabel>
         </SelectionsContainer>

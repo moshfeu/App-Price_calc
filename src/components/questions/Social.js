@@ -22,19 +22,19 @@ import {
       <MainText>Do you want your App to be connected to Socials?</MainText>
       <ButtonsWrapper>
         <SelectionsContainer>
-            <RouteLink to="/questions/payments">
+            <RouteLink to="/questions/payments" price={1000}>
               <Icon icon={faThumbsUp} />
             </RouteLink>
           <ButtonLabel>Yes</ButtonLabel>
         </SelectionsContainer>
         <SelectionsContainer>
-          <RouteLink to="/questions/payments">
+            <RouteLink to="/questions/payments" price={0}>
               <Icon icon={faThumbsDown} />
           </RouteLink>
           <ButtonLabel>No</ButtonLabel>
         </SelectionsContainer>
         <SelectionsContainer>
-          <RouteLink to="/questions/payments">
+            <RouteLink to="/questions/payments" price={0}>
               <Icon icon={ faArrowsAltH} />
           </RouteLink>
           <ButtonLabel>I don't know</ButtonLabel>

@@ -24,19 +24,19 @@ function Payments() {
       <MainText>Do you want in-App purchases?</MainText>
       <ButtonsWrapper>
         <SelectionsContainer>
-            <RouteLink to="/questions/logo">
+            <RouteLink to="/questions/logo" price={4000}>
               <Icon icon={faCcMastercard} />
             </RouteLink>
           <ButtonLabel>Yes</ButtonLabel>
         </SelectionsContainer>
         <SelectionsContainer>
-          <RouteLink to="/questions/logo">
+          <RouteLink to="/questions/logo" price={0}>
               <Icon icon={faCreativeCommonsNcEu} />
           </RouteLink>
           <ButtonLabel>No</ButtonLabel>
         </SelectionsContainer>
         <SelectionsContainer>
-          <RouteLink to="/questions/logo">
+            <RouteLink to="/questions/logo" price={0}>
               <Icon icon={ faArrowsAltH} />
           </RouteLink>
           <ButtonLabel>I don't know</ButtonLabel>

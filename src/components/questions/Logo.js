@@ -21,13 +21,13 @@ function Logo() {
       <MainText>Do you want a logo for your brand?</MainText>
       <ButtonsWrapper>
         <SelectionsContainer>
-            <RouteLink to="/recap">
+            <RouteLink to="/recap" price={3000}>
               <Icon icon={faSmile} />
             </RouteLink>
           <ButtonLabel>Yes</ButtonLabel>
         </SelectionsContainer>
         <SelectionsContainer>
-          <RouteLink to="/recap">
+            <RouteLink to="/recap" price={0}>
               <Icon icon={faFrown} />
           </RouteLink>
           <ButtonLabel>No</ButtonLabel>

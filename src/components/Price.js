@@ -1,10 +1,12 @@
-import React from 'react'
-import {Pricing} from './StyledComponents'
+import React from "react";
+import { Pricing } from "./StyledComponents";
 
 export default function Price() {
-    return (
-        <div>
-            <Pricing>0</Pricing>
-        </div>
-    )
+  return (
+    <div>
+      <Pricing>0</Pricing>
+    </div>
+  );
 }
+
+/*{.reduce((a, b) => a + b, 0)}*/
