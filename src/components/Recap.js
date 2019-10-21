@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { PricingContext } from "./model/PricingContext";
 import {
   MainWrapper,
   ListItem,
@@ -8,9 +9,15 @@ import {
   PreviousPage
 } from "./StyledComponents";
 function Recap() {
+  const [items, setItems] = useContext(PricingContext);
+  const cleanUp = () => {
+    setItems(items.splice(0, items.lemgth));
+  };
   return (
     <MainWrapper>
-      <PreviousPage to="./">Restart</PreviousPage>
+      <PreviousPage to="./" onClick={cleanUp}>
+        Restart
+      </PreviousPage>
       <SelectionsContainer>
         <ListItem>Platform of choice :</ListItem>
         <ButtonLabel>€</ButtonLabel>

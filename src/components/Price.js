@@ -3,10 +3,11 @@ import { Pricing } from "./StyledComponents";
 import { PricingContext } from "./model/PricingContext";
 
 export default function Price(props) {
-  const [prices, setPrices] = useContext(PricingContext);
+  const [items, setItems] = useContext(PricingContext);
+  const finalPrice = items.reduce((a, b) => a + b, 0);
   return (
     <div>
-      <Pricing>0</Pricing>
+      <Pricing>{finalPrice}</Pricing>
     </div>
   );
 }
