@@ -5,7 +5,6 @@ import {
   faAngellist
 } from "@fortawesome/free-brands-svg-icons";
 import {
-  InvInput,
   MainWrapper,
   MainText,
   ButtonsWrapper,
@@ -13,8 +12,7 @@ import {
   SelectionsContainer,
   ButtonLabel,
   PreviousPage,
-  RouteLink,
-  SubButton
+  RouteLink
 } from "../StyledComponents";
 
 function Type(props) {
@@ -25,17 +23,12 @@ function Type(props) {
       <ButtonsWrapper>
         <SelectionsContainer method="POST">
           <RouteLink to="/questions/social">
-            <SubButton type="submit">
-              <Icon icon={faApple} />
-            </SubButton>
+            <Icon icon={faApple} />
           </RouteLink>
-          <InvInput name="choice" readonly value={2000} />
           <ButtonLabel>Apple</ButtonLabel>
         </SelectionsContainer>
         <SelectionsContainer>
-          <RouteLink to="/questions/social">
-            <Icon icon={faAndroid} />
-          </RouteLink>
+          <Icon icon={faAndroid} />
           <ButtonLabel>Android</ButtonLabel>
         </SelectionsContainer>
         <SelectionsContainer>
