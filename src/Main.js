@@ -7,13 +7,13 @@ import Payments from "./components/questions/Payments";
 import Logo from "./components/questions/Logo";
 import Price from "./components/Price";
 import Recap from "./components/Recap";
-import { PricingProvider } from "./components/model/PricingContext";
+import { PagesProvider } from "./components/model/PagesContext";
 
 function Main() {
   return (
     <Router>
       <div>
-        <PricingProvider>
+        <PagesProvider>
           <Route path="/questions/" component={Price} />
           <Route exact path="/" component={Frontpage} />
           <Route exact path="/questions/type" component={Type} />
@@ -21,7 +21,7 @@ function Main() {
           <Route exact path="/questions/payments" component={Payments} />
           <Route exact path="/questions/logo" component={Logo} />
           <Route exact path="/recap" component={Recap} />
-        </PricingProvider>
+        </PagesProvider>
       </div>
     </Router>
   );

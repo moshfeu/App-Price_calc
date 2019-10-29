@@ -122,7 +122,7 @@ const ButtonsWrapper = styled.div`
   display: flex;
   margin-top: 2em;
 `;
-const SelectionsContainer = styled.div`
+const SelectionsContainer = styled.form`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -155,8 +155,17 @@ const ContactButton = styled(StartButton)`
     background-color: #0aceff;
   }
 `;
+const InvInput = styled.input`
+  display: none;
+`;
+const SubButton = styled.button`
+  outline: none;
+  border: none;
+`;
 
 export {
+  SubButton,
+  InvInput,
   ContactButton,
   Pricing,
   MainWrapper,

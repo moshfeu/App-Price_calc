@@ -1,11 +1,11 @@
-import React, { useState, useContext } from "react";
-import { PricingContext } from "../model/PricingContext";
+import React from "react";
 import {
   faApple,
   faAndroid,
   faAngellist
 } from "@fortawesome/free-brands-svg-icons";
 import {
+  InvInput,
   MainWrapper,
   MainText,
   ButtonsWrapper,
@@ -13,42 +13,33 @@ import {
   SelectionsContainer,
   ButtonLabel,
   PreviousPage,
-  RouteLink
+  RouteLink,
+  SubButton
 } from "../StyledComponents";
 
 function Type(props) {
-  const [prices, setPrices] = useState([2000, 1500, 0]);
-  const [items, setItems] = useContext(PricingContext);
-  const AddPrice = e => {
-    setItems(previousItems => [...previousItems, 2000]);
-  };
   return (
     <MainWrapper>
       <PreviousPage to="/">Previous Page</PreviousPage>
       <MainText>What platform you want your app to be built on?</MainText>
       <ButtonsWrapper>
-        <SelectionsContainer>
-          <RouteLink onClick={AddPrice} to="/questions/social">
-            <Icon icon={faApple} />
+        <SelectionsContainer method="POST">
+          <RouteLink to="/questions/social">
+            <SubButton type="submit">
+              <Icon icon={faApple} />
+            </SubButton>
           </RouteLink>
+          <InvInput name="choice" readonly value={2000} />
           <ButtonLabel>Apple</ButtonLabel>
         </SelectionsContainer>
         <SelectionsContainer>
-          <RouteLink
-            to="/questions/social"
-            onClick={AddPrice}
-            price={prices[1]}
-          >
+          <RouteLink to="/questions/social">
             <Icon icon={faAndroid} />
           </RouteLink>
           <ButtonLabel>Android</ButtonLabel>
         </SelectionsContainer>
         <SelectionsContainer>
-          <RouteLink
-            to="/questions/social"
-            onClick={AddPrice}
-            price={prices[2]}
-          >
+          <RouteLink to="/questions/social">
             <Icon icon={faAngellist} />
           </RouteLink>
           <ButtonLabel>Both</ButtonLabel>
