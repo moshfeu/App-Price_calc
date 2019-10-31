@@ -1,12 +1,13 @@
 import React, { useState, createContext } from "react";
-import Pages from "./Pages.model";
 export const PagesContext = createContext();
 export const PagesProvider = props => {
-  const [items, setItems] = useState(Pages);
+  const [pages, setPages] = useState([]);
   const [history, setHistory] = useState([]);
-
+  const [prices, setPrices] = useState([]);
   return (
-    <PagesContext.Provider value={[items, setItems, history, setHistory]}>
+    <PagesContext.Provider
+      value={[history, setHistory, pages, setPages, prices, setPrices]}
+    >
       {props.children}
     </PagesContext.Provider>
   );

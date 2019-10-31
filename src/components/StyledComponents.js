@@ -49,11 +49,11 @@ const SubText = styled.h3`
 `;
 const StartButton = styled.button`
   color: #e5e5e5;
-  margin-top: 1em;
-  background-color: #40c9a2;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  background-color: #28bd43;
   border: none;
-  border-radius: 15px;
-  box-shadow: 0 5px #e5e5e5;
+  border-radius: 25px;
   width: 11em;
   height: 3em;
   font-size: 1em;
@@ -64,10 +64,11 @@ const StartButton = styled.button`
     cursor: pointer;
   }
   :active {
-    background-color: #2d8e73;
+    background-color: #1b822e;
     outline: none;
     border: none;
     transform: translateY(4px);
+    box-shadow: 0 5px #28bd43;
   }
 `;
 
@@ -150,9 +151,10 @@ const ListItem = styled.li`
 const ContactButton = styled(StartButton)`
   width: 13em;
   height: 3em;
-  background-color: #07a0c6;
+  background-color: #3d8bf2;
   :active {
-    background-color: #0aceff;
+    background-color: #2e6dbf;
+    box-shadow: 0 5px #3d8bf2;
   }
 `;
 

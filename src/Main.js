@@ -1,12 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Router, Route } from "react-router-dom";
 import Frontpage from "./components/Frontpage";
-import Type from "./components/questions/Type";
 import Social from "./components/questions/Social";
 import Payments from "./components/questions/Payments";
 import Logo from "./components/questions/Logo";
 import Price from "./components/Price";
 import Recap from "./components/Recap";
+import Type from "./components/questions/Type";
 import { PagesProvider } from "./components/model/PagesContext";
 
 function Main() {
