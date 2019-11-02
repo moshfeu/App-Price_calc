@@ -14,7 +14,6 @@ import {
 function Logo() {
   return (
     <MainWrapper>
-      <PreviousPage to="./payments">Previous Page</PreviousPage>
       <MainText>Do you want a logo for your brand?</MainText>
       <ButtonsWrapper>
         <SelectionsContainer>

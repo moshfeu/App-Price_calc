@@ -18,7 +18,6 @@ import {
 function Payments() {
   return (
     <MainWrapper>
-      <PreviousPage to="./social">Previous Page</PreviousPage>
       <MainText>Do you want in-App purchases?</MainText>
       <ButtonsWrapper>
         <SelectionsContainer>

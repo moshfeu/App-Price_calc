@@ -77,11 +77,11 @@ const PreviousPage = styled(Link)`
   font-weight: bold;
   position: absolute;
   top: 3em;
-  left: 4em;
+  left: 2em;
   font-family: "Quicksand", sans-serif;
   text-decoration: none;
   &:before {
-    content: "« ";
+    content: "« Previous Page";
   }
   &:hover {
     color: #630226;
@@ -96,7 +96,7 @@ const Pricing = styled.span`
   font-weight: bold;
   position: absolute;
   top: 3em;
-  right: 4em;
+  right: 2em;
   &:after {
     content: "€";
   }

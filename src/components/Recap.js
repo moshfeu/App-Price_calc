@@ -5,15 +5,13 @@ import {
   SelectionsContainer,
   ButtonLabel,
   ContactButton,
-  PreviousPage
 } from "./StyledComponents";
 function Recap() {
   /*const cleanUp = () => {
-    setItems(items.splice(0, items.lemgth));
+    setItems(price.splice(0, price.lemgth));
   };*/
   return (
     <MainWrapper>
-      <PreviousPage to="./">Restart</PreviousPage>
       <SelectionsContainer>
         <ListItem>Platform of choice :</ListItem>
         <ButtonLabel>€</ButtonLabel>

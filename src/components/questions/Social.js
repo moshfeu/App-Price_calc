@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import {
   faThumbsUp,
   faThumbsDown,
@@ -11,14 +11,12 @@ import {
   Icon,
   SelectionsContainer,
   ButtonLabel,
-  PreviousPage,
   RouteLink
 } from "../StyledComponents";
 
 function Social() {
   return (
     <MainWrapper>
-      <PreviousPage to="./type">Previous Page</PreviousPage>
       <MainText>Do you want your App to be connected to Socials?</MainText>
       <ButtonsWrapper>
         <SelectionsContainer>

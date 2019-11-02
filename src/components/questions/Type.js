@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import TypeModel from "../model/questions.model/Type.model";
+import PagesContext from "../model/PagesContext";
 import {
   faApple,
   faAndroid,
@@ -11,14 +13,12 @@ import {
   Icon,
   SelectionsContainer,
   ButtonLabel,
-  PreviousPage,
   RouteLink
 } from "../StyledComponents";
-
-function Type(props) {
+/*const [pages, setPages] = useContext(PagesContext);*/
+const Type = () => {
   return (
     <MainWrapper>
-      <PreviousPage to="/">Previous Page</PreviousPage>
       <MainText>What platform you want your app to be built on?</MainText>
       <ButtonsWrapper>
         <SelectionsContainer method="POST">
@@ -40,5 +40,5 @@ function Type(props) {
       </ButtonsWrapper>
     </MainWrapper>
   );
-}
+};
 export default Type;
