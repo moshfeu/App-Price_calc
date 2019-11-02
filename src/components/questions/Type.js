@@ -18,6 +18,7 @@ import {
 /*const [pages, setPages] = useContext(PagesContext);*/
 const Type = () => {
   return (
+    /*Will be generated from the model later, now it is hardcoded*/
     <MainWrapper>
       <MainText>What platform you want your app to be built on?</MainText>
       <ButtonsWrapper>
