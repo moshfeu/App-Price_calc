@@ -1,11 +1,6 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext} from "react";
 import TypeModel from "../model/questions.model/Type.model";
 import PagesContext from "../model/PagesContext";
-import {
-  faApple,
-  faAndroid,
-  faAngellist
-} from "@fortawesome/free-brands-svg-icons";
 import {
   MainWrapper,
   MainText,
@@ -15,29 +10,23 @@ import {
   ButtonLabel,
   RouteLink
 } from "../StyledComponents";
-/*const [pages, setPages] = useContext(PagesContext);*/
+const model = TypeModel();
 const Type = () => {
   return (
     /*Will be generated from the model later, now it is hardcoded*/
     <MainWrapper>
-      <MainText>What platform you want your app to be built on?</MainText>
+      <MainText>{model.title}</MainText>
       <ButtonsWrapper>
-        <SelectionsContainer method="POST">
-          <RouteLink to="/questions/social">
-            <Icon icon={faApple} />
-          </RouteLink>
-          <ButtonLabel>Apple</ButtonLabel>
-        </SelectionsContainer>
+        {
+        model.buttons.map(button => (
         <SelectionsContainer>
-          <Icon icon={faAndroid} />
-          <ButtonLabel>Android</ButtonLabel>
-        </SelectionsContainer>
-        <SelectionsContainer>
-          <RouteLink to="/questions/social">
-            <Icon icon={faAngellist} />
+          <RouteLink to={button.next}>
+            <Icon icon={button.icon} />
           </RouteLink>
-          <ButtonLabel>Both</ButtonLabel>
+          <ButtonLabel>{button.name}</ButtonLabel>
         </SelectionsContainer>
+        ))
+        }
       </ButtonsWrapper>
     </MainWrapper>
   );
