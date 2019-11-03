@@ -1,4 +1,4 @@
-import React, { useContext} from "react";
+import React, { useContextc} from "react";
 import TypeModel from "../model/questions.model/Type.model";
 import PagesContext from "../model/PagesContext";
 import {
@@ -13,7 +13,6 @@ import {
 const model = TypeModel();
 const Type = () => {
   return (
-    /*Will be generated from the model later, now it is hardcoded*/
     <MainWrapper>
       <MainText>{model.title}</MainText>
       <ButtonsWrapper>
