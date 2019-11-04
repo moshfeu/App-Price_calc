@@ -3,7 +3,7 @@ import { Pricing } from "./StyledComponents";
 import { PagesContext } from "./model/PagesContext";
 
 export default function Price(props) {
-  /*const finalPrice = items.reduce((a, b) => a + b, 0);
+  /*const finalPrice = price.reduce((a, b) => a + b, 0);
    */ return (
     <div>
       <Pricing />

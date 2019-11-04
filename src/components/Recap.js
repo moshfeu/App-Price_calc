@@ -8,7 +8,7 @@ import {
 } from "./StyledComponents";
 function Recap() {
   /*const cleanUp = () => {
-    setItems(price.splice(0, price.lemgth));
+    setPrice(price.splice(0, price.lemgth));
   };*/
   return (
     <MainWrapper>

@@ -1,9 +1,9 @@
 import React, { useState, createContext } from "react";
 export const PagesContext = createContext();
 export const PagesProvider = props => {
-  const [prices, setPrices] = useState([]);
+  const [price, setPrice] = useState([]);
   return (
-    <PagesContext.Provider value={[prices, setPrices]}>
+    <PagesContext.Provider value={[price, setPrice]}>
       {props.children}
     </PagesContext.Provider>
   );
