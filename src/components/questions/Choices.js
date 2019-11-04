@@ -1,5 +1,5 @@
 import React, { useContextc} from "react";
-import TypeModel from "../model/questions.model/Type.model";
+import Model from "../model/questions.model/Model";
 import PagesContext from "../model/PagesContext";
 import {
   MainWrapper,
@@ -10,8 +10,8 @@ import {
   ButtonLabel,
   RouteLink
 } from "../StyledComponents";
-const model = TypeModel();
-const Type = () => {
+const model = Model();
+const Choices = () => {
   return (
     <MainWrapper>
       <MainText>{model.title}</MainText>
@@ -30,4 +30,4 @@ const Type = () => {
     </MainWrapper>
   );
 };
-export default Type;
+export default Choices;

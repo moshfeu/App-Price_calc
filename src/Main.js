@@ -11,7 +11,7 @@ import { PagesProvider } from "./components/model/PagesContext";
 import { PreviousPage } from "./components/StyledComponents";
 
 function Main() {
-  
+
   return (
     <Router>
       <div>
@@ -29,7 +29,7 @@ function Main() {
               );
             }}
           />
-          <Route exact path="/questions/type" component={Type} />
+          <Route exact path="/questions/type" component={Choices} />
           <Route exact path="/questions/social" component={Social} />
           <Route exact path="/questions/payments" component={Payments} />
           <Route exact path="/questions/logo" component={Logo} />
