@@ -20,7 +20,7 @@ const Choices = () => {
         model.buttons.map(button => (
         <SelectionsContainer>
           <RouteLink to={button.next}>
-            <Icon icon={button.icon} />
+            <Icon src={button.icon} />
           </RouteLink>
           <ButtonLabel>{button.name}</ButtonLabel>
         </SelectionsContainer>
