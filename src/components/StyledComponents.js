@@ -1,13 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Icon = styled.input.attrs(props => ({
-
-    type: "image",
-}))
-`
-max-width:3em;
+const Icon =  styled.img`
+  max-width:3em;
   max-height:3em;
   border-radius: 50%;
   :hover {

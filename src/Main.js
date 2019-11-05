@@ -7,7 +7,9 @@ import Choices from "./components/questions/Choices";
 import { PagesProvider } from "./components/model/PagesContext";
 import { PreviousPage } from "./components/StyledComponents";
 import Model from "./components/model/questions.model/Model"
-function Main() {
+
+function Main(props) {
+const model = Model();
 
   return (
     <Router>
@@ -26,7 +28,10 @@ function Main() {
               );
             }}
           />
-          <Route exact path="/questions/type" component={Choices} />
+          {model.map(choice=>(
+          <Route exact path={`/questions/${choice.name}`} component={Choices} values={choice.values} pagename={choice.name} />
+          ))
+          }
         </PagesProvider>
       </div>
     </Router>

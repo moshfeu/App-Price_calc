@@ -1,6 +1,5 @@
-import React, { useContextc} from "react";
-import Model from "../model/questions.model/Model";
-import PagesContext from "../model/PagesContext";
+import React from "react";
+/*import PagesContext from "../model/PagesContext";*/
 import {
   MainWrapper,
   MainText,
@@ -10,21 +9,21 @@ import {
   ButtonLabel,
   RouteLink
 } from "../StyledComponents";
-const model = Model();
-const Choices = () => {
+
+const Choices = ({pagename, values}) => {
   return (
     <MainWrapper>
-      <MainText>{model.title}</MainText>
+      <MainText>{pagename}</MainText>
       <ButtonsWrapper>
         {
-        model.buttons.map(button => (
+        values.map(button=>(
         <SelectionsContainer>
           <RouteLink to={button.next}>
-            <Icon src={button.icon} />
+            <Icon src={button.icon} key={button.id}/>
           </RouteLink>
           <ButtonLabel>{button.name}</ButtonLabel>
         </SelectionsContainer>
-        ))
+          ))
         }
       </ButtonsWrapper>
     </MainWrapper>
