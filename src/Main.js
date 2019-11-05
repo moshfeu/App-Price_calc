@@ -29,7 +29,9 @@ const model = Model();
             }}
           />
           {model.map(choice=>(
-          <Route exact path={`/questions/${choice.name}`} component={Choices} values={choice.values} pagename={choice.name} />
+          <Route exact path={`/questions/${choice.name}`}
+          render={(props) => <Choices values={choice.values} pagename={choice.title} />}
+          />
           ))
           }
         </PagesProvider>
