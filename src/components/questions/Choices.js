@@ -19,7 +19,7 @@ const Choices = ({pagename, values}) => {
         values.map(button=>(
         <SelectionsContainer>
           <RouteLink to={button.next}>
-            <Icon src={button.icon} key={button.id}/>
+            <Icon src={button.icon} key={button.id} price={button.price}/>
           </RouteLink>
           <ButtonLabel>{button.name}</ButtonLabel>
         </SelectionsContainer>
