@@ -9,21 +9,21 @@ const Model = () => {
         {
           id: 1,
           name: "Apple",
-          icon: "./svg-icons/apple-brands.svg",
+          icon: "apple-brands.svg",
           price: 2000,
           next: "/questions/social"
         },
         {
           id: 2,
           name: "Android",
-          icon: "./svg-icons/android.svg",
+          icon: "android.svg",
           price: 1500,
           next: "/questions/social"
         },
         {
           id: 3,
           name: "Both",
-          icon: "./svg-icons/both.svg",
+          icon: "both.svg",
           price: 3500,
           next: "/questions/social"
         }
@@ -37,21 +37,21 @@ const Model = () => {
         {
           id: 4,
           name: "Yes",
-          icon: "./svg-icons/users.svg",
+          icon: "users.svg",
           price: 1400,
           next: "/questions/payments"
         },
         {
           id: 5,
           name: "No",
-          icon: "./svg-icons/no-social.svg",
+          icon: "no-social.svg",
           price: 0,
           next: "/questions/payments"
         },
         {
           id: 6,
           name: "I don't know",
-          icon: "./svg-icons/dunno.svg",
+          icon: "dunno.svg",
           price: 0,
           next: "/questions/payments"
         }
@@ -65,21 +65,21 @@ const Model = () => {
         {
           id: 7,
           name: "Yes",
-          icon: "./svg-icons/money.svg",
+          icon: "money.svg",
           price: 3000,
           next: "/questions/logo"
         },
         {
           id: 8,
           name: "No",
-          icon: "./svg-icons/no-money.svg",
+          icon: "no-money.svg",
           price: 0,
           next: "/questions/logo"
         },
         {
           id: 9,
           name: "I don't know",
-          icon: "./svg-icons/dunno.svg",
+          icon: "dunno.svg",
           price: 0,
           next: "/questions/logo"
         }
@@ -93,14 +93,14 @@ const Model = () => {
         {
           id: 10,
           name: "Yes",
-          icon: "./svg-icons/Yes.svg",
+          icon: "Yes.svg",
           price: 3000,
           next: "/questions/recap"
         },
         {
           id: 11,
           name: "No",
-          icon: "./svg-icons/No.svg",
+          icon: "No.svg",
           price: 0,
           next: "/questions/recap"
         }

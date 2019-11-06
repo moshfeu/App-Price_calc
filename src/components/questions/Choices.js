@@ -11,24 +11,23 @@ import {
 } from "../StyledComponents";
 
 const Choices = ({ pagename, values }) => {
-  const { price, setPrice } = useContext(PagesContext);
-  const AddPrice = e => {
-    setPrice([e.target.price, ...price]);
-  };
   return (
     <MainWrapper>
       <MainText>{pagename}</MainText>
       <ButtonsWrapper>
-        {
-        values.map(button=>(
-        <SelectionsContainer>
-          <RouteLink to={button.next} onClick={AddPrice}>
-            <Icon src={button.icon} key={button.id} price={button.price}/>
-          </RouteLink>
-          <ButtonLabel>{button.name}</ButtonLabel>
-        </SelectionsContainer>
-          ))
-        }
+        {values.map(button => (
+          <SelectionsContainer>
+            <RouteLink to={button.next}>
+              <Icon
+                src={"/svg-icons/" + button.icon}
+                key={button.id}
+                price={button.price}
+                style={{ width: "100px", height: "100px" }}
+              />
+            </RouteLink>
+            <ButtonLabel>{button.name}</ButtonLabel>
+          </SelectionsContainer>
+        ))}
       </ButtonsWrapper>
     </MainWrapper>
   );
