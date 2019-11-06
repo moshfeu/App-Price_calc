@@ -7,21 +7,21 @@ const Model = () => {
       id: uuid(),
       values: [
         {
-          id: 1,
+          id: uuid(),
           name: "Apple",
           icon: "./svg-icons/apple-brands.svg",
           price: 2000,
           next: "/questions/social"
         },
         {
-          id: 2,
+          id: uuid(),
           name: "Android",
           icon: "./svg-icons/android.svg",
           price: 1500,
           next: "/questions/social"
         },
         {
-          id: 3,
+          id: uuid(),
           name: "Both",
           icon: "./svg-icons/both.svg",
           price: 3500,
@@ -35,21 +35,21 @@ const Model = () => {
       id: uuid(),
       values: [
         {
-          id: 4,
+          id: uuid(),
           name: "Yes",
           icon: "./svg-icons/users.svg",
           price: 1400,
           next: "/questions/payments"
         },
         {
-          id: 5,
+          id: uuid(),
           name: "No",
           icon: "./svg-icons/no-social.svg",
           price: 0,
           next: "/questions/payments"
         },
         {
-          id: 6,
+          id: uuid(),
           name: "I don't know",
           icon: "./svg-icons/dunno.svg",
           price: 0,
@@ -63,21 +63,21 @@ const Model = () => {
       id: uuid(),
       values: [
         {
-          id: 7,
+          id: uuid(),
           name: "Yes",
           icon: "./svg-icons/money.svg",
           price: 3000,
           next: "/questions/logo"
         },
         {
-          id: 8,
+          id: uuid(),
           name: "No",
           icon: "./svg-icons/no-money.svg",
           price: 0,
           next: "/questions/logo"
         },
         {
-          id: 9,
+          id: uuid(),
           name: "I don't know",
           icon: "./svg-icons/dunno.svg",
           price: 0,
@@ -91,14 +91,14 @@ const Model = () => {
       id: uuid(),
       values: [
         {
-          id: 10,
+          id: uuid(),
           name: "Yes",
           icon: "./svg-icons/Yes.svg",
           price: 3000,
           next: "/questions/recap"
         },
         {
-          id: 11,
+          id: uuid(),
           name: "No",
           icon: "./svg-icons/No.svg",
           price: 0,
