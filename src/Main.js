@@ -11,7 +11,6 @@ import Model from "./components/model/questions.model/Model";
 
 function Main(props) {
   const model = Model();
-
   return (
     <Router>
       <div>

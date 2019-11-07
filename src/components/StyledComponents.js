@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 const Icon = styled.img`
   max-width: 3em;
@@ -70,7 +69,7 @@ const StartButton = styled.button`
   }
 `;
 
-const PreviousPage = styled(Link)`
+const PreviousPage = styled.span`
   color: #c1054a;
   font-weight: bold;
   position: absolute;
@@ -82,11 +81,9 @@ const PreviousPage = styled(Link)`
     content: "« Previous Page";
   }
   &:hover {
+    cursor: pointer;
     color: #630226;
   }
-`;
-const RouteLink = styled(Link)`
-  text-decoration: none;
 `;
 
 const Pricing = styled.span`
@@ -171,6 +168,5 @@ export {
   MainTitle,
   SubText,
   StartButton,
-  RouteLink,
   ListItem
 };
