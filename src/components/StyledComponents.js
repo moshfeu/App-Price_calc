@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-const Icon =  styled.img`
-  max-width:3em;
-  max-height:3em;
+const Icon = styled.img`
+  max-width: 3em;
+  max-height: 3em;
   border-radius: 50%;
   :hover {
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
   :active {
     outline: none;

@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Pricing } from "./StyledComponents";
-/*import { PagesContext } from "./model/PagesContext";*/
+import { PagesContext } from "./model/PagesContext";
 
 export default function Price(props) {
-  /*const finalPrice = price.reduce((a, b) => a + b, 0);
-   */ return (
+  const [price] = useContext(PagesContext);
+  const finalPrice = 4;
+  return (
     <div>
-      <Pricing />
+      <Pricing>{finalPrice}</Pricing>
     </div>
   );
 }
