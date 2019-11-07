@@ -8,11 +8,9 @@ import {
   SelectionsContainer,
   ButtonLabel
 } from "../StyledComponents";
-import { useHistory } from "react-router";
 
 const Choices = ({ pagename, values }) => {
-  const history = useHistory();
-  const [price, setPrice] = useContext(PagesContext);
+  const [price, setPrice, history] = useContext(PagesContext);
   const AddPrice = e => {
     values.forEach(element => {
       if (element.id === e.target.id) {
