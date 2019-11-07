@@ -17,28 +17,21 @@ function Main(props) {
         <PagesProvider>
           <Route exact path="/" component={Frontpage} />
           <Route exact path="/recap" component={Recap} />
-          <Route
-            path="/questions/"
-            render={() => {
-              return (
-                <>
-                  <Price />
-                  <PreviousPage />
-                </>
-              );
-            }}
-          />
           {model.map(choice => (
             <Route
               id={uuid()}
               exact
               path={`/questions/${choice.name}`}
               render={props => (
-                <Choices
-                  values={choice.values}
-                  pagename={choice.title}
-                  id={choice.id}
-                />
+                <>
+                  <Choices
+                    values={choice.values}
+                    pagename={choice.title}
+                    id={choice.id}
+                  />
+                  <Price />
+                  <PreviousPage />
+                </>
               )}
             />
           ))}
