@@ -6,28 +6,33 @@ import {
   ButtonsWrapper,
   Icon,
   SelectionsContainer,
-  ButtonLabel,
-  RouteLink
+  ButtonLabel
 } from "../StyledComponents";
+import { useHistory } from "react-router";
 
 const Choices = ({ pagename, values }) => {
+  const history = useHistory();
   const [price, setPrice] = useContext(PagesContext);
   const AddPrice = e => {
-    setPrice([...price, e.target.price]);
+    values.forEach(element => {
+      if (element.id === e.target.id) {
+        setPrice([
+          ...price,
+          { price: element.price, url: history.location.pathname }
+        ]);
+        history.push(element.next);
+      }
+    });
   };
   return (
-    <MainWrapper>
-      <MainText>{pagename}</MainText>
-      <ButtonsWrapper>
-        {values.map(button => (
-          <SelectionsContainer>
-            <RouteLink to={button.next} price={button.price} onClick={AddPrice}>
-              <Icon
-                src={"/svg-icons/" + button.icon}
-                key={button.id}
-                style={{ width: "100px", height: "100px" }}
-              />
-            </RouteLink>
+  
+            <Icon
+              onClick={AddPrice}
+              src={"/svg-icons/" + button.icon}
+              id={button.id}
+              style={{ width: "100px", height: "100px" }}
+            />
+
             <ButtonLabel>{button.name}</ButtonLabel>
           </SelectionsContainer>
         ))}
