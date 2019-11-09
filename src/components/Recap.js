@@ -1,35 +1,16 @@
-import React from "react";
-import {
-  MainWrapper,
-  ListItem,
-  SelectionsContainer,
-  ButtonLabel,
-  ContactButton,
-} from "./StyledComponents";
+import React, { useContext } from "react";
+import { PagesContext } from "./model/PagesContext";
+
+
 function Recap() {
-  /*const cleanUp = () => {
-    setPrice(price.splice(0, price.lemgth));
-  };*/
+  const [price, setPrice, history]=useContext(PagesContext);
+  const cleanUp = () => {
+    setPrice(price.slice(0));
+    history.push("/");
+  }; 
   return (
-    <MainWrapper>
-      <SelectionsContainer>
-        <ListItem>Platform of choice :</ListItem>
-        <ButtonLabel>€</ButtonLabel>
-      </SelectionsContainer>
-      <SelectionsContainer>
-        <ListItem>Social Networks :</ListItem>
-        <ButtonLabel>€</ButtonLabel>
-      </SelectionsContainer>
-      <SelectionsContainer>
-        <ListItem>In-App Payments :</ListItem>
-        <ButtonLabel>€</ButtonLabel>
-      </SelectionsContainer>
-      <SelectionsContainer>
-        <ListItem>Brand Logo :</ListItem>
-        <ButtonLabel>€</ButtonLabel>
-      </SelectionsContainer>
-      <ContactButton>Contact us!</ContactButton>
-    </MainWrapper>
+      <button onClick={cleanUp}>Restart</button>
+      
   );
 }
 export default Recap;

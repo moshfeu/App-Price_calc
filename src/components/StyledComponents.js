@@ -69,7 +69,7 @@ const StartButton = styled.button`
   }
 `;
 
-const PreviousPage = styled.span`
+const Previous = styled.span`
   color: #c1054a;
   font-weight: bold;
   position: absolute;
@@ -162,7 +162,7 @@ export {
   Icon,
   SelectionsContainer,
   ButtonLabel,
-  PreviousPage,
+  Previous,
   CoverImage,
   FrontWrapper,
   MainTitle,
