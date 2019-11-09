@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { PagesContext } from "./model/PagesContext";
+import { whileStatement } from "@babel/types";
 
 
 function Recap() {
@@ -9,7 +10,7 @@ function Recap() {
     history.push("/");
   }; 
   return (
-      <button onClick={cleanUp}>Restart</button>
+      <button  style={{ width: "100px", height: "100px", color: "white"}} onClick={cleanUp}>Restart</button>
       
   );
 }
