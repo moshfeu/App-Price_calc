@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import { PagesContext } from './model/PagesContext'
+import React from 'react';
 import { CoverImage,
     FrontWrapper,
     MainTitle,
@@ -8,9 +7,8 @@ import { CoverImage,
 
 
  const Frontpage = () => {
-     const history = useContext(PagesContext);
      const handleStart = () => {
-         history.push("/questions/type");
+         window.location.href = "/questions/type";;
      };
     return (
         <FrontWrapper> 

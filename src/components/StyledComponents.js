@@ -50,20 +50,19 @@ const StartButton = styled.button`
   margin-bottom: 1em;
   background-color: #28bd43;
   border: none;
+  outline:none;
   border-radius: 25px;
   width: 11em;
   height: 3em;
   font-size: 1em;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
-  :hover {
+  &:hover {
     transform: scale(1.05);
     cursor: pointer;
   }
-  :active {
+   &:active {
     background-color: #1b822e;
-    outline: none;
-    border: none;
     transform: translateY(4px);
     box-shadow: 0 5px #28bd43;
   }
@@ -78,7 +77,7 @@ const Previous = styled.span`
   font-family: "Quicksand", sans-serif;
   text-decoration: none;
   &:before {
-    content: "« Previous Page";
+    content: "« ";
   }
   &:hover {
     cursor: pointer;

@@ -9,7 +9,7 @@ const handleReturn = () =>{
     history.goBack();
 }
 return(
-<Previous onClick={handleReturn}/>
+<Previous onClick={handleReturn}>Previous Page</Previous>
 )
 }
 
