@@ -27,7 +27,7 @@ const Choices = ({ pagename, values }) => {
       <MainText>{pagename}</MainText>
       <ButtonsWrapper>
         {values.map(button => (
-          <SelectionsContainer>
+          <SelectionsContainer key={button.id}>
             <Icon
               onClick={AddPrice}
               src={"/svg-icons/" + button.icon}
