@@ -4,10 +4,9 @@ import { PagesContext } from "./model/PagesContext";
 
 export default function Price(props) {
   const context = useContext(PagesContext);
-  console.log(context)
-  const midPrice = context[0].map((value) => (value.price));
-  const finalPrice = midPrice.reduce((a,b) => a + b, 0);
-  
+  const midPrice = context[0].map(value => value.price);
+  const finalPrice = midPrice.reduce((a, b) => a + b, 0);
+
   return (
     <div>
       <Pricing>{finalPrice}</Pricing>

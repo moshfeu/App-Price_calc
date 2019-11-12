@@ -3,10 +3,10 @@ import { PagesContext } from "./model/PagesContext";
 import Price from "../components/Price";
 
 function Recap() {
-  const history = useContext(PagesContext);
+  const [price, setPrice, history] = useContext(PagesContext);
   const cleanUp = () => {
-    history[2].push("/");
-    window.location.reload(false);
+    history.push("/");
+    setPrice(price.slice(price.length));
   };
   return (
     <>

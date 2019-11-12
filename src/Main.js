@@ -29,7 +29,7 @@ function Main() {
                     pagename={choice.title}
                     id={choice.id}
                   />
-                  <Price key={uuid()}/>
+                  <Price key={uuid()} />
                   <PreviousPage key={uuid()} />
                 </>
               )}
