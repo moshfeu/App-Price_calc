@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const Icon = styled.img`
-  max-width: 3em;
-  max-height: 3em;
+  max-width: 5em;
+  max-height: 5em;
   border-radius: 50%;
   :hover {
     cursor: pointer;
@@ -116,6 +116,7 @@ const MainText = styled.h1`
 const ButtonsWrapper = styled.div`
   display: flex;
   margin-top: 2em;
+  max-width:100vw;
 `;
 const SelectionsContainer = styled.div`
   display: flex;
@@ -132,8 +133,10 @@ const SelectionsContainer = styled.div`
 
 const ButtonLabel = styled.h6`
   color: #e5e5e5;
+  text-align:center;
   font-size: 0.8em;
   font-family: "Quicksand", sans-serif;
+  width:100%;
 `;
 
 const ListItem = styled.li`
