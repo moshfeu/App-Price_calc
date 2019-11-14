@@ -23,9 +23,11 @@ const Choices = ({ pagename, values }) => {
       } /*else {
         setPrice(
           price.forEach(obj => {
-            if (checker && element.id === e.target.id)
-              obj.price = element.price;
-          })
+            if (checker && element.id === e.target.id){
+              obj.price = element.price
+          }
+        }
+        )
         );
         history.push(element.next);
       }*/
