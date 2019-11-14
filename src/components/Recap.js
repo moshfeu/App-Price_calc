@@ -1,22 +1,12 @@
-import React, { useContext } from "react";
-import { PagesContext } from "./model/PagesContext";
+import React from "react";
 import Price from "../components/Price";
+import PreviousPage from "../components/PreviousPage";
 
 function Recap() {
-  const [price, setPrice, history] = useContext(PagesContext);
-  const cleanUp = () => {
-    history.push("/");
-    setPrice(price.slice(price.length));
-  };
   return (
     <>
+      <PreviousPage />
       <Price />
-      <button
-        style={{ width: "100px", height: "100px", color: "white" }}
-        onClick={cleanUp}
-      >
-        Restart
-      </button>
     </>
   );
 }
