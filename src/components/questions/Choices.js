@@ -20,7 +20,7 @@ const Choices = ({ pagename, values }) => {
           { price: element.price, url: history.location.pathname }
         ]);
         history.push(element.next);
-      } else {
+      } /*else {
         setPrice(
           price.forEach(obj => {
             if (checker && element.id === e.target.id)
@@ -28,7 +28,7 @@ const Choices = ({ pagename, values }) => {
           })
         );
         history.push(element.next);
-      }
+      }*/
     });
   };
   return (
