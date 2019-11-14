@@ -50,7 +50,7 @@ const StartButton = styled.button`
   margin-bottom: 1em;
   background-color: #28bd43;
   border: none;
-  outline:none;
+  outline: none;
   border-radius: 25px;
   width: 11em;
   height: 3em;
@@ -61,7 +61,7 @@ const StartButton = styled.button`
     transform: scale(1.05);
     cursor: pointer;
   }
-   &:active {
+  &:active {
     background-color: #1b822e;
     transform: translateY(4px);
     box-shadow: 0 5px #28bd43;
@@ -76,8 +76,8 @@ const Previous = styled.span`
   left: 2em;
   font-family: "Quicksand", sans-serif;
   text-decoration: none;
-  &:before {
-    content: "« ";
+  :before {
+    content:"${props => (props.restart ? "« Restart" : "« Previous Page")}";
   }
   &:hover {
     cursor: pointer;
@@ -116,7 +116,7 @@ const MainText = styled.h1`
 const ButtonsWrapper = styled.div`
   display: flex;
   margin-top: 2em;
-  max-width:100vw;
+  max-width: 100vw;
 `;
 const SelectionsContainer = styled.div`
   display: flex;
@@ -133,10 +133,10 @@ const SelectionsContainer = styled.div`
 
 const ButtonLabel = styled.h6`
   color: #e5e5e5;
-  text-align:center;
+  text-align: center;
   font-size: 0.8em;
   font-family: "Quicksand", sans-serif;
-  width:100%;
+  width: 100%;
 `;
 
 const ListItem = styled.li`
