@@ -13,9 +13,12 @@ const Choices = ({ pagename, values }) => {
   const [price, setPrice, history] = useContext(PagesContext);
   const AddPrice = e => {
     values.forEach(element => {
+      const newState = price.filter(
+        obj => obj.url !== history.location.pathname
+      );
       if (element.id === e.target.id) {
         setPrice([
-          ...price,
+          ...newState,
           { price: element.price, url: history.location.pathname }
         ]);
         history.push(element.next);
