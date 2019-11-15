@@ -11,26 +11,15 @@ import {
 
 const Choices = ({ pagename, values }) => {
   const [price, setPrice, history] = useContext(PagesContext);
-  const checker = price.some(item => item.url === history.location.pathname);
   const AddPrice = e => {
     values.forEach(element => {
-      if (element.id === e.target.id && !checker) {
+      if (element.id === e.target.id) {
         setPrice([
           ...price,
           { price: element.price, url: history.location.pathname }
         ]);
         history.push(element.next);
-      } /*else {
-        setPrice(
-          price.forEach(obj => {
-            if (checker && element.id === e.target.id){
-              obj.price = element.price
-          }
-        }
-        )
-        );
-        history.push(element.next);
-      }*/
+      }
     });
   };
   return (
