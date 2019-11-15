@@ -19,9 +19,15 @@ const Choices = ({ pagename, values }) => {
       if (element.id === e.target.id) {
         setPrice([
           ...newState,
-          { price: element.price, url: history.location.pathname }
+          {
+            price: element.price,
+            url: history.location.pathname,
+            name: element.name,
+            page: pagename
+          }
         ]);
         history.push(element.next);
+        console.log(price);
       }
     });
   };
