@@ -3,7 +3,7 @@ import { PagesContext } from "./model/PagesContext";
 import { Previous, Restart } from "./StyledComponents";
 
 const PreviousPage = props => {
-  const [price, setPrice, history] = useContext(PagesContext);
+  /*const [price, setPrice, history] = useContext(PagesContext);
   const handleReturn = () => {
     setPrice(price.slice(0, price.length - 1));
     history.goBack();
@@ -19,6 +19,7 @@ const PreviousPage = props => {
   ) {
     return <Previous onClick={handleReturn} />;
   }
-  return <Restart onClick={handleCleanUp} />;
+  return <Restart onClick={handleCleanUp} />; */
+  return <div />;
 };
 export default PreviousPage;
