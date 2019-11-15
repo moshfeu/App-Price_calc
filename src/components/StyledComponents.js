@@ -77,11 +77,17 @@ const Previous = styled.span`
   font-family: "Quicksand", sans-serif;
   text-decoration: none;
   :before {
-    content:"${props => (props.restart ? "« Restart" : "« Previous Page")}";
+    content: "« Previous Page";
   }
   &:hover {
     cursor: pointer;
     color: #630226;
+  }
+`;
+
+const Restart = styled(Previous)`
+  :before {
+    content: "« Restart";
   }
 `;
 
@@ -158,6 +164,7 @@ const ContactButton = styled(StartButton)`
 export {
   ContactButton,
   Pricing,
+  Restart,
   MainWrapper,
   MainText,
   ButtonsWrapper,

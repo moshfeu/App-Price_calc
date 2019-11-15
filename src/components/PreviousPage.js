@@ -14,7 +14,7 @@ const PreviousPage = props => {
   };
 
   if (
-    history.location.pathname !== "/questions/type" ||
+    history.location.pathname !== "/questions/type" &&
     history.location.pathname !== "/recap"
   ) {
     return <Previous onClick={handleReturn} />;
