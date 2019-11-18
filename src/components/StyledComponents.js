@@ -161,21 +161,38 @@ const ContactButton = styled(StartButton)`
 `;
 /* Recap */
 const RecapWrapper = styled(FrontWrapper)`
-  margin-top: 15vh;
+  margin-top: 13vh;
   justify-content: flex-start;
 `;
-const RecapIcon = styled(Icon)`
+const RecapContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: auto;
+`;
+const RecapIcon = styled.img`
+  border-radius: 50%;
   width: 2em;
   height: 2em;
 `;
 const RecapText = styled(SubText)`
   font-size: 1.5rem;
 `;
-const Toggle = styled.span`
-  max-width: 50vw;
+const RecapSingleSelectionContainer = styled.div`
+  display: flex;
+`;
+const RecapLabel = styled(ButtonLabel)`
   font-size: 0.7rem;
+`;
+const Toggle = styled.span`
+  margin-top: 1em;
+  max-width: 50vw;
+  font-size: 0.8rem;
   text-align: center;
   color: #c1054a;
+  font-weight: 600;
   :hover {
     cursor: pointer;
     color: #630226;
@@ -183,6 +200,9 @@ const Toggle = styled.span`
 `;
 
 export {
+  RecapLabel,
+  RecapSingleSelectionContainer,
+  RecapContainer,
   Toggle,
   RecapText,
   RecapIcon,

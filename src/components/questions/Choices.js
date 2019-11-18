@@ -41,7 +41,6 @@ const Choices = ({ pagename, values }) => {
               onClick={AddPrice}
               src={"/svg-icons/" + button.icon}
               id={button.id}
-              style={{ width: "100px", height: "100px" }}
             />
             <ButtonLabel>{button.name}</ButtonLabel>
           </SelectionsContainer>
