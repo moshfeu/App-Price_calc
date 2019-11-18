@@ -11,8 +11,9 @@ import {
 
 const Choices = ({ pagename, values }) => {
   const [price, setPrice, history] = useContext(PagesContext);
+  const newHistory = history.location.pathname.replace("/edit", "");
   const arrayCheck = obj => {
-    if (obj.url !== history.location.pathname) return true;
+    if (obj.url !== newHistory) return true;
   };
 
   const AddPrice = e => {
@@ -22,7 +23,7 @@ const Choices = ({ pagename, values }) => {
         setPrice([
           ...newState,
           {
-            url: history.location.pathname.replace("/edit", ""),
+            url: newHistory,
             icon: element.icon,
             price: element.price,
             id: element.id,
@@ -31,7 +32,6 @@ const Choices = ({ pagename, values }) => {
           }
         ]);
         history.push(element.next);
-        console.log(price);
       }
     });
   };
