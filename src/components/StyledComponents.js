@@ -155,14 +155,14 @@ const RecapContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 60vw;
+  height: 100%;
   justify-content: flex-start;
-  align-items: flex-start;
   margin: auto;
 `;
 const RecapIcon = styled.img`
   border-radius: 50%;
-  width: 2em;
-  height: 2em;
+  width: 3em;
+  height: 3em;
 `;
 const RecapText = styled(SubText)`
   font-size: 1.5rem;
