@@ -147,7 +147,7 @@ const ButtonLabel = styled.h6`
 
 /* Recap */
 const RecapWrapper = styled(FrontWrapper)`
-  margin-top: 13vh;
+  margin-top: 5em;
   justify-content: flex-start;
 `;
 const RecapContainer = styled.div`
