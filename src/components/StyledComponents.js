@@ -1,18 +1,6 @@
 import styled from "styled-components";
 
-const Icon = styled.img`
-  width: 5em;
-  height: 5em;
-  border-radius: 50%;
-  :hover {
-    cursor: pointer;
-    transform: scale(1.3);
-  }
-  :active {
-    outline: none;
-    transform: translateY(4px);
-  }
-`;
+/* Front Page */
 const CoverImage = styled.img`
   alt: "cover-image";
   content: url("https://images.unsplash.com/photo-1545138697-45eb2968b249?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1559&q=80");
@@ -67,7 +55,7 @@ const StartButton = styled.button`
     box-shadow: 0 5px #28bd43;
   }
 `;
-
+/* Prev, Restart, Price */
 const Previous = styled.span`
   color: #c1054a;
   font-weight: bold;
@@ -101,7 +89,21 @@ const Pricing = styled.span`
     content: "€";
   }
 `;
+/* Choices */
 
+const Icon = styled.img`
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  :hover {
+    cursor: pointer;
+    transform: scale(1.3);
+  }
+  :active {
+    outline: none;
+    transform: translateY(4px);
+  }
+`;
 const MainWrapper = styled.div`
   margin-top: auto;
   display: flex;
@@ -144,21 +146,6 @@ const ButtonLabel = styled.h6`
   width: 100%;
 `;
 
-const ListItem = styled.li`
-  list-style-type: none;
-  color: #c1054a;
-  font-weight: bolder;
-  font-size: 1.5em;
-`;
-const ContactButton = styled(StartButton)`
-  width: 13em;
-  height: 3em;
-  background-color: #3d8bf2;
-  :active {
-    background-color: #2e6dbf;
-    box-shadow: 0 5px #3d8bf2;
-  }
-`;
 /* Recap */
 const RecapWrapper = styled(FrontWrapper)`
   margin-top: 13vh;
@@ -207,7 +194,6 @@ export {
   RecapText,
   RecapIcon,
   RecapWrapper,
-  ContactButton,
   Pricing,
   Restart,
   MainWrapper,
@@ -221,6 +207,5 @@ export {
   FrontWrapper,
   MainTitle,
   SubText,
-  StartButton,
-  ListItem
+  StartButton
 };
