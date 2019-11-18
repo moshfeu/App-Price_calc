@@ -11,11 +11,13 @@ import {
 
 const Choices = ({ pagename, values }) => {
   const [price, setPrice, history] = useContext(PagesContext);
+  const arrayCheck = obj => {
+    if (obj.url !== history.location.pathname) return true;
+  };
+
   const AddPrice = e => {
     values.forEach(element => {
-      const newState = price.filter(
-        obj => obj.url !== history.location.pathname
-      );
+      const newState = price.filter(arrayCheck);
       if (element.id === e.target.id) {
         setPrice([
           ...newState,
