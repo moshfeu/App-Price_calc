@@ -20,6 +20,7 @@ const Choices = ({ pagename, values }) => {
         setPrice([
           ...newState,
           {
+            icon: element.icon,
             price: element.price,
             url: history.location.pathname,
             name: element.name,
@@ -27,7 +28,6 @@ const Choices = ({ pagename, values }) => {
           }
         ]);
         history.push(element.next);
-        console.log(price);
       }
     });
   };

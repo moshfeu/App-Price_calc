@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const Icon = styled.img`
-  max-width: 5em;
-  max-height: 5em;
+  width: 5em;
+  height: 5em;
   border-radius: 50%;
   :hover {
     cursor: pointer;
@@ -79,7 +79,7 @@ const Previous = styled.span`
   :before {
     content: "« Previous Page";
   }
-  &:hover {
+  :hover {
     cursor: pointer;
     color: #630226;
   }
@@ -97,7 +97,7 @@ const Pricing = styled.span`
   position: absolute;
   top: 3em;
   right: 2em;
-  &:after {
+  :after {
     content: "€";
   }
 `;
@@ -117,7 +117,6 @@ const MainText = styled.h1`
   max-width: 80vw;
   font-size: 2rem;
   text-align: center;
-  grid-area: title;
 `;
 const ButtonsWrapper = styled.div`
   display: flex;
@@ -160,8 +159,34 @@ const ContactButton = styled(StartButton)`
     box-shadow: 0 5px #3d8bf2;
   }
 `;
+/* Recap */
+const RecapWrapper = styled(FrontWrapper)`
+  margin-top: 15vh;
+  justify-content: flex-start;
+`;
+const RecapIcon = styled(Icon)`
+  width: 2em;
+  height: 2em;
+`;
+const RecapText = styled(SubText)`
+  font-size: 1.5rem;
+`;
+const Toggle = styled.span`
+  max-width: 50vw;
+  font-size: 0.7rem;
+  text-align: center;
+  color: #c1054a;
+  :hover {
+    cursor: pointer;
+    color: #630226;
+  }
+`;
 
 export {
+  Toggle,
+  RecapText,
+  RecapIcon,
+  RecapWrapper,
   ContactButton,
   Pricing,
   Restart,

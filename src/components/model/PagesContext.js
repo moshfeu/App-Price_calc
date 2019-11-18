@@ -8,8 +8,9 @@ export const PagesProvider = props => {
       price: 0
     }
   ]);
+  const finalPrice = price.map(value => value.price).reduce((a, b) => a + b, 0);
   return (
-    <PagesContext.Provider value={[price, setPrice, history]}>
+    <PagesContext.Provider value={[price, setPrice, history, finalPrice]}>
       {props.children}
     </PagesContext.Provider>
   );
