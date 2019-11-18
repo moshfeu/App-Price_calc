@@ -20,14 +20,16 @@ const Choices = ({ pagename, values }) => {
         setPrice([
           ...newState,
           {
+            url: history.location.pathname.replace("/edit", ""),
             icon: element.icon,
             price: element.price,
-            url: history.location.pathname,
+            id: element.id,
             name: element.name,
             page: pagename
           }
         ]);
         history.push(element.next);
+        console.log(price);
       }
     });
   };

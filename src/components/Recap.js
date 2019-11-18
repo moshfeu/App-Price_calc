@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import PreviousPage from "../components/PreviousPage";
 import { PagesContext } from "./model/PagesContext";
+import uuid from "uuid";
 import {
   RecapText,
   RecapWrapper,
@@ -9,7 +10,11 @@ import {
   RecapLabel,
   RecapIcon,
   RecapContainer,
-  RecapSingleSelectionContainer
+  RecapSingleSelectionContainer,
+  Answer,
+  Change,
+  AnswerContainer,
+  EndPrice
 } from "./StyledComponents";
 
 function Recap() {
@@ -18,19 +23,40 @@ function Recap() {
   const handleShow = () => {
     setShow({ toggle: !show.toggle });
   };
+  const handleChange = e => {
+    context[0].forEach(element => {
+      if (element.id === e.target.id) {
+        context[2].push(`${element.url}/edit`);
+      }
+    });
+  };
+
   return (
     <RecapWrapper>
       <PreviousPage />
-      <RecapText>Your Estimated end price is: {context[3]}€</RecapText>
+      <RecapText>
+        Your Estimated end price is: <EndPrice>{context[3]}€</EndPrice>
+      </RecapText>
       {show.toggle &&
         context[0].map(selection => (
-          <RecapContainer>
-            <RecapSingleSelectionContainer>
-              <RecapIcon src={"/svg-icons/" + selection.icon} />
-              <RecapLabel>{selection.page}</RecapLabel>
-            </RecapSingleSelectionContainer>
-          </RecapContainer>
+          <>
+            <RecapContainer id={uuid()}>
+              <RecapSingleSelectionContainer id={uuid()}>
+                <RecapIcon src={"/svg-icons/" + selection.icon} />
+                <AnswerContainer id={uuid()}>
+                  <RecapLabel id={uuid()}>{selection.page}</RecapLabel>
+                  <Answer id={uuid()}>
+                    {selection.name}
+                    <Change onClick={handleChange} id={selection.id}>
+                      (Change)
+                    </Change>
+                  </Answer>
+                </AnswerContainer>
+              </RecapSingleSelectionContainer>
+            </RecapContainer>
+          </>
         ))}
+
       <Toggle onClick={handleShow}>
         {show.toggle ? "(Hide Recap)" : "(Show Recap)"}
       </Toggle>

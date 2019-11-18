@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 /* Front Page */
 const CoverImage = styled.img`
   alt: "cover-image";
@@ -154,11 +153,12 @@ const RecapWrapper = styled(FrontWrapper)`
 const RecapContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 60vw;
-  height: 100%;
-  justify-content: flex-start;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
   margin: auto;
 `;
+
 const RecapIcon = styled.img`
   border-radius: 50%;
   width: 3em;
@@ -167,14 +167,15 @@ const RecapIcon = styled.img`
 const RecapText = styled(SubText)`
   font-size: 1.5rem;
 `;
+const EndPrice = styled.span`
+  color: #c1054a;
+`;
 const RecapSingleSelectionContainer = styled.div`
   display: flex;
+  justify-content: flex-start;
 `;
-const RecapLabel = styled(ButtonLabel)`
-  font-size: 0.7rem;
-`;
+
 const Toggle = styled.span`
-  margin-top: 1em;
   max-width: 50vw;
   font-size: 0.8rem;
   text-align: center;
@@ -185,8 +186,30 @@ const Toggle = styled.span`
     color: #630226;
   }
 `;
-
+const RecapLabel = styled(ButtonLabel)`
+  font-size: 0.7rem;
+`;
+const AnswerContainer = styled(RecapContainer)`
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+`;
+const Answer = styled(ButtonLabel)`
+  margin-top: -3px;
+  font-weight: 800;
+  color: #28bd43;
+`;
+const Change = styled(Toggle)`
+  font-size: 0.5rem;
+  text-decoration: none;
+  margin-top: auto;
+  margin-left: 6px;
+`;
 export {
+  EndPrice,
+  AnswerContainer,
+  Change,
+  Answer,
   RecapLabel,
   RecapSingleSelectionContainer,
   RecapContainer,

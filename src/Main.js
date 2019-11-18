@@ -20,7 +20,6 @@ function Main() {
           {model.map(choice => (
             <Route
               key={uuid()}
-              exact
               path={`/questions/${choice.name}`}
               render={() => (
                 <>
