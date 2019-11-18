@@ -95,14 +95,14 @@ const Model = () => {
           name: "Yes",
           icon: "Yes.svg",
           price: 3000,
-          next: "/questions/recap"
+          next: "/recap"
         },
         {
           id: uuid(),
           name: "No",
           icon: "No.svg",
           price: 0,
-          next: "/questions/recap"
+          next: "/recap"
         }
       ]
     }

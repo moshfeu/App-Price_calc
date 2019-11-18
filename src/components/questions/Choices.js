@@ -11,12 +11,25 @@ import {
 
 const Choices = ({ pagename, values }) => {
   const [price, setPrice, history] = useContext(PagesContext);
+  const newHistory = history.location.pathname.replace("/edit", "");
+  const arrayCheck = obj => {
+    if (obj.url !== newHistory) return true;
+  };
+
   const AddPrice = e => {
     values.forEach(element => {
+      const newState = price.filter(arrayCheck);
       if (element.id === e.target.id) {
         setPrice([
-          ...price,
-          { price: element.price, url: history.location.pathname }
+          ...newState,
+          {
+            url: newHistory,
+            icon: element.icon,
+            price: element.price,
+            id: element.id,
+            name: element.name,
+            page: pagename
+          }
         ]);
         history.push(element.next);
       }
@@ -32,7 +45,6 @@ const Choices = ({ pagename, values }) => {
               onClick={AddPrice}
               src={"/svg-icons/" + button.icon}
               id={button.id}
-              style={{ width: "100px", height: "100px" }}
             />
             <ButtonLabel>{button.name}</ButtonLabel>
           </SelectionsContainer>

@@ -1,18 +1,5 @@
 import styled from "styled-components";
-
-const Icon = styled.img`
-  max-width: 3em;
-  max-height: 3em;
-  border-radius: 50%;
-  :hover {
-    cursor: pointer;
-    transform: scale(1.3);
-  }
-  :active {
-    outline: none;
-    transform: translateY(4px);
-  }
-`;
+/* Front Page */
 const CoverImage = styled.img`
   alt: "cover-image";
   content: url("https://images.unsplash.com/photo-1545138697-45eb2968b249?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1559&q=80");
@@ -50,7 +37,7 @@ const StartButton = styled.button`
   margin-bottom: 1em;
   background-color: #28bd43;
   border: none;
-  outline:none;
+  outline: none;
   border-radius: 25px;
   width: 11em;
   height: 3em;
@@ -61,13 +48,13 @@ const StartButton = styled.button`
     transform: scale(1.05);
     cursor: pointer;
   }
-   &:active {
+  &:active {
     background-color: #1b822e;
     transform: translateY(4px);
     box-shadow: 0 5px #28bd43;
   }
 `;
-
+/* Prev, Restart, Price */
 const Previous = styled.span`
   color: #c1054a;
   font-weight: bold;
@@ -76,12 +63,18 @@ const Previous = styled.span`
   left: 2em;
   font-family: "Quicksand", sans-serif;
   text-decoration: none;
-  &:before {
-    content: "« ";
+  :before {
+    content: "« Previous Page";
   }
-  &:hover {
+  :hover {
     cursor: pointer;
     color: #630226;
+  }
+`;
+
+const Restart = styled(Previous)`
+  :before {
+    content: "« Restart";
   }
 `;
 
@@ -91,11 +84,25 @@ const Pricing = styled.span`
   position: absolute;
   top: 3em;
   right: 2em;
-  &:after {
+  :after {
     content: "€";
   }
 `;
+/* Choices */
 
+const Icon = styled.img`
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  :hover {
+    cursor: pointer;
+    transform: scale(1.3);
+  }
+  :active {
+    outline: none;
+    transform: translateY(4px);
+  }
+`;
 const MainWrapper = styled.div`
   margin-top: auto;
   display: flex;
@@ -111,11 +118,11 @@ const MainText = styled.h1`
   max-width: 80vw;
   font-size: 2rem;
   text-align: center;
-  grid-area: title;
 `;
 const ButtonsWrapper = styled.div`
   display: flex;
   margin-top: 2em;
+  max-width: 100vw;
 `;
 const SelectionsContainer = styled.div`
   display: flex;
@@ -132,29 +139,86 @@ const SelectionsContainer = styled.div`
 
 const ButtonLabel = styled.h6`
   color: #e5e5e5;
+  text-align: center;
   font-size: 0.8em;
   font-family: "Quicksand", sans-serif;
+  width: 100%;
 `;
 
-const ListItem = styled.li`
-  list-style-type: none;
-  color: #c1054a;
-  font-weight: bolder;
-  font-size: 1.5em;
+/* Recap */
+const RecapWrapper = styled(FrontWrapper)`
+  margin-top: 5em;
+  justify-content: flex-start;
 `;
-const ContactButton = styled(StartButton)`
-  width: 13em;
+const RecapContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+`;
+
+const RecapIcon = styled.img`
+  border-radius: 50%;
+  width: 3em;
   height: 3em;
-  background-color: #3d8bf2;
-  :active {
-    background-color: #2e6dbf;
-    box-shadow: 0 5px #3d8bf2;
+`;
+const RecapText = styled(SubText)`
+  font-size: 1.5rem;
+`;
+const EndPrice = styled.span`
+  color: #c1054a;
+`;
+const RecapSingleSelectionContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+`;
+
+const Toggle = styled.span`
+  max-width: 50vw;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #c1054a;
+  font-weight: 600;
+  :hover {
+    cursor: pointer;
+    color: #630226;
   }
 `;
-
+const RecapLabel = styled(ButtonLabel)`
+  font-size: 0.7rem;
+`;
+const AnswerContainer = styled(RecapContainer)`
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+`;
+const Answer = styled(ButtonLabel)`
+  margin-top: -3px;
+  font-weight: 800;
+  color: #28bd43;
+`;
+const Change = styled(Toggle)`
+  font-size: 0.5rem;
+  text-decoration: none;
+  margin-top: auto;
+  margin-left: 6px;
+`;
 export {
-  ContactButton,
+  EndPrice,
+  AnswerContainer,
+  Change,
+  Answer,
+  RecapLabel,
+  RecapSingleSelectionContainer,
+  RecapContainer,
+  Toggle,
+  RecapText,
+  RecapIcon,
+  RecapWrapper,
   Pricing,
+  Restart,
   MainWrapper,
   MainText,
   ButtonsWrapper,
@@ -166,6 +230,5 @@ export {
   FrontWrapper,
   MainTitle,
   SubText,
-  StartButton,
-  ListItem
+  StartButton
 };

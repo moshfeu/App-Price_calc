@@ -16,11 +16,10 @@ function Main() {
       <div>
         <PagesProvider>
           <Route exact path="/" component={Frontpage} />
-          <Route exact path="/questions/recap" component={Recap} />
+          <Route exact path="/recap" component={Recap} />
           {model.map(choice => (
             <Route
               key={uuid()}
-              exact
               path={`/questions/${choice.name}`}
               render={() => (
                 <>
@@ -29,7 +28,7 @@ function Main() {
                     pagename={choice.title}
                     id={choice.id}
                   />
-                  <Price key={uuid()}/>
+                  <Price key={uuid()} />
                   <PreviousPage key={uuid()} />
                 </>
               )}
